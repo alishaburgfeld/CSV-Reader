@@ -12,10 +12,8 @@ class Animal:
 def find_animal():
     animal=input("Which type of animal are you interested in adopting?")
     animal_list=[]   
- 
 
     if animal.lower()=="dog" or animal.lower()=="dogs":
-
         with open('data/dogs.csv', newline="") as csvfile:
             dogreader= csv.reader(csvfile, delimiter=',', quotechar='|')
             for row in dogreader:
@@ -23,8 +21,6 @@ def find_animal():
                 
 
     elif animal.lower()=="cat" or animal.lower()=="cats":
-        # if (len(animal_list)>0):
-        #     animal_list=[]
         with open('data/cats.csv', newline="") as csvfile:
             catreader= csv.reader(csvfile, delimiter=',', quotechar='|')
             for row in catreader:
@@ -32,7 +28,6 @@ def find_animal():
 
     else:
         return f"Sorry we don't have any {animal}'s here"
-
 
     answer=f"These are the {animal}'s we have available for adoption: "
 
